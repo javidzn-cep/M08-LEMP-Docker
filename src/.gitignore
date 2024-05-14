@@ -1,38 +1,15 @@
-# Ignorar directorio de almacenamiento de Laravel
-/storage/
-
-# Ignorar archivos de configuración específicos de Laravel
-# .env
-
-# Ignorar directorio de dependencias de Composer
-/vendor/
-
-# Ignorar directorio de archivos generados por IDEs
-.idea/
-*.iml
-
-# Ignorar archivos de logs
-/logs/
-*.log
-
-# Ignorar archivos de caché generados por Laravel
-/bootstrap/cache/
-
-# Ignorar archivos de respaldo y temporales
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
 .phpunit.result.cache
+docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
-
-# Ignorar archivos generados por el sistema operativo
-.DS_Store
-Thumbs.db
-
-# Ignorar archivos de configuración de caché
-.phpstorm.meta.php
-
-# Ignorar archivo de configuración de Vagrant
-Vagrantfile
-
-# Ignorar archivo de configuración de Valet
-.valet/
+yarn-error.log
+/.idea
+/.vscode

@@ -27,11 +27,19 @@
 
 # ________________________   LARAVEL   ________________________ #
 
-/src/storage/
+/src/node_modules
+/src/public/hot
+/src/public/storage
+/src/storage/*.key
+/src/vendor
 # /src/.env
-/src/vendor/
-/src/storage/logs/
-/src/*.log
-/src/bootstrap/cache/
-/src/.DS_Store
-/src/Thumbs.db
+/src/.env.example
+/src/.phpunit.result.cache
+/src/docker-compose.override.yml
+/src/Homestead.json
+/src/Homestead.yaml
+/src/npm-debug.log
+/src/yarn-error.log
+/src/.idea
+/src/.vscode
+/src/.docker
