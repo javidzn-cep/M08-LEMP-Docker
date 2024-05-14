@@ -1,0 +1,37 @@
+
+# ________________________   VUE   ________________________ #
+
+/landing/node_modules/
+/landing/dist/
+/landing/build/
+/landing/.vuepress/dist/
+/landing/.vuepress/.temp/
+/landing/.idea/
+/landing/.vscode/
+/landing/npm-debug.log*
+/landing/yarn-debug.log*
+/landing/yarn-error.log*
+/landing/.DS_Store
+/landing/Thumbs.db
+
+
+# ________________________   MYSQL   ________________________ #
+
+/mysql/data/
+/mysql/*.sql
+/mysql/*.sql.gz
+/mysql/*.sql.bz2
+/mysql/*.sql.xz
+/mysql/*.cnf
+
+
+# ________________________   LARAVEL   ________________________ #
+
+/src/storage/
+# /src/.env
+/src/vendor/
+/src/storage/logs/
+/src/*.log
+/src/bootstrap/cache/
+/src/.DS_Store
+/src/Thumbs.db

@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+
+  # Web Server Service
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - app
+      - db
+
+  #Database Service
+  db:
+    image : mysql
+    container_name : mysql
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "5432:3306"
+    environment:
+      MYSQL_DATABASE: blog
+      MYSQL_ROOT_PASSWORD: password
+
+  # Application Service
+  app:
+    container_name: blog
+    build: 
+      context: ./src
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www
+    ports:
+      - "9000:9000"
+  
+  composer:
+    container_name: composer
+    image: composer:2.6.6
+    depends_on:
+      - app
+    volumes:
+      - ./src:/app
+    restart: always
+    command: 
+      - composer
+      - install
+
+  landing:
+    container_name: landing
+    build:
+      context: ./landing
+      dockerfile: Dockerfile
+    volumes:
+      - ./landing:/app
+    ports:
+      - "7500:80"
+    working_dir: /app
+
+  # phpMyAdmin Service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
