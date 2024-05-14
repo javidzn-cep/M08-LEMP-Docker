@@ -47,8 +47,9 @@ services:
       - ./src:/app
     restart: always
     command: 
-      - composer
-      - install
+      - bash
+      - -c
+      - "composer update && composer install"
 
   landing:
     container_name: landing
