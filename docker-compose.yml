@@ -31,7 +31,7 @@ services:
   app:
     container_name: blog
     build: 
-      context: ./src
+      context: ./php
       dockerfile: Dockerfile
     volumes:
       - ./src:/var/www
