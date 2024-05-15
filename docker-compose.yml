@@ -45,7 +45,6 @@ services:
       - app
     volumes:
       - ./src:/app
-    restart: always
     command: 
       - sh
       - -c
