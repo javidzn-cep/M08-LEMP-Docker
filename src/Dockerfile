@@ -31,7 +31,7 @@ apt-utils \
     libicu-dev \
     libonig-dev \
     libxml2-dev
-    
+
 # RUN echo "\e[1;33mInstall important docker dependencies\e[0m"
 # RUN docker-php-ext-install \
 #     exif \
@@ -53,4 +53,3 @@ apt-utils \
 # RUN apt-get install -y libpq-dev \
 #     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
 #     && docker-php-ext-install pdo pdo_pgsql pgsql
-
