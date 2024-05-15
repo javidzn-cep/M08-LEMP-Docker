@@ -47,20 +47,22 @@ services:
       - ./src:/app
     restart: always
     command: 
-      - bash
+      - sh
       - -c
       - "chmod -R 755 /app && chmod -R 777 /app/storage && composer update && composer install"
 
   landing:
     container_name: landing
-    build:
-      context: ./landing
-      dockerfile: Dockerfile
+    image: node:20-alpine
     volumes:
       - ./landing:/app
     ports:
       - "7500:80"
     working_dir: /app
+    command: 
+      - sh
+      - -c
+      - "npm i && npm run serve -- --port 80"
 
   # phpMyAdmin Service
   phpmyadmin:
