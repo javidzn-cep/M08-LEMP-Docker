@@ -38,7 +38,7 @@ export default {
   },
   mounted(){
     const me = this
-    axios.get('http://localhost:8080/api/users')
+    axios.get('/api/users/')
     .then(result => me.users = result.data)
     .catch(error => console.error(error))
     .finally(() => this.loadingData = false)
