@@ -56,12 +56,12 @@ services:
     volumes:
       - ./landing:/app
     ports:
-      - "7500:80"
+      - "7500:8080"
     working_dir: /app
     command: 
       - sh
       - -c
-      - "npm i && npm run serve -- --port 80"
+      - "npm i && npm run serve"
 
   # phpMyAdmin Service
   phpmyadmin:
